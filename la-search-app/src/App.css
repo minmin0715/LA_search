@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -21,5 +19,8 @@
   font-size: 15pt;
   font-weight: normal;
 }
-
+.search-section{
+  width: 70%;
+  margin: auto;
+}
 
