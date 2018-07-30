@@ -1,0 +1,24 @@
+.search-wrapper {
+    padding-top: 50px;
+    .search-section{
+        width: 60%;
+        margin: auto;
+        margin-top: 50px;
+        display: flex;
+        .gw-logo-blue {
+            background-image: url('gw_logo_blue.svg');
+            display: block;
+            width: 50px;
+            height: 50px;
+            background-size: 100%;
+            margin-right: 20px;
+          }
+        input[type="text"], textarea {
+            outline: none;
+            box-shadow:none !important;
+            height: 50px;
+            font-size: 20pt;
+            font-weight: normal;
+        }
+    }
+}
