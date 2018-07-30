@@ -19,9 +19,14 @@ class App extends Component {
 class SearchField extends Component {
   render() {
     return (
-      <div>
+      <div className="search-wrapper">
         <div className="search-section">
-          This is the search field.
+          <form>
+            <span className="gw-logo-blue"></span>
+            <div>
+              <input type="text" className="form-control border-top-0 border-left-0 border-right-0"></input>
+            </div>
+          </form>
         </div>
       </div>
     );
