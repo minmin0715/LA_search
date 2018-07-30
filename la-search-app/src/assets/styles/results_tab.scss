@@ -1,0 +1,25 @@
+.tabs-group {
+    display: flex;
+    align-items: center;
+    padding-top: 50px;
+
+    .tab-section {
+        margin-right: 40px;
+        font-size: 20px;
+        color: #5D5D5D;
+        display: flex;
+        align-items: center;
+        
+        .icon-arrow {
+            background-image: url('assets/images/card_toggle_arrow.svg');
+            display: inline-block;
+            width: 75px;
+            height: 75px;
+            background-size: 100%;
+            margin-right: 20px;
+            margin-left: -15px;
+            outline: none !important;
+            
+        }
+    }
+}

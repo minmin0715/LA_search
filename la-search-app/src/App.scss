@@ -1,4 +1,5 @@
 @import './assets/styles/search_field';
+@import './assets/styles/results_tab';
 $blue: #007AAA;
 
 
@@ -18,6 +19,11 @@ $blue: #007AAA;
     font-size: 15pt;
     font-weight: normal;
   }
+}
+
+.search-content {
+  width: 70%;
+  margin: auto;
 }
 
 
