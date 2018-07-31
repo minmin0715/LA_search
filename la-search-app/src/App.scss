@@ -3,7 +3,6 @@
 @import './assets/styles/search_card';
 $blue: #007AAA;
 
-
 .App-header {
   background-color: $blue;
   height: 70px;
@@ -25,12 +24,29 @@ $blue: #007AAA;
 .search-content {
   width: 70%;
   margin: auto;
+
+  .tabs-group {
+    hr {
+      margin-top: -23px;
+      margin-left: -0px;
+      border-top: 1px solid #00739D;
+    }
+    
+    .most-questions hr{
+        width: 300px;
+    }
+    .my-questions hr{
+      width: 140px;
+    }
+  }
+
+  .search-card {
+    display: flex;
+    align-items: center;
+  }
 }
 
-.search-card {
-  display: flex;
-  align-items: center;
-}
+
 
 
 

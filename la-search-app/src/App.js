@@ -16,8 +16,14 @@ class App extends Component {
         <div className="search-content">
           <SearchField/>
           <div className="tabs-group">
-            <ResultsTabs title="Most frequently asked questions"/>
-            <ResultsTabs title="My questions"/>
+            <div className="most-questions">
+              <ResultsTabs title="Most frequently asked questions"/>
+              <hr/>
+            </div>
+            <div className="my-questions">
+              <ResultsTabs title="My questions"/>
+              <hr/>
+            </div>
           </div>
           <div className="search-card">
             <SearchCard/>
