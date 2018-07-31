@@ -15,8 +15,10 @@ class App extends Component {
         </header>
         <div className="search-content">
           <SearchField/>
-          <ResultsTabs/>
-          
+          <div className="tabs-group">
+            <ResultsTabs title="Most frequently asked questions"/>
+            <ResultsTabs title="My questions"/>
+          </div>
         </div>
         
       </div>
