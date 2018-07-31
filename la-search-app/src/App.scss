@@ -1,5 +1,6 @@
 @import './assets/styles/search_field';
 @import './assets/styles/results_tab';
+@import './assets/styles/search_card';
 $blue: #007AAA;
 
 
@@ -24,6 +25,11 @@ $blue: #007AAA;
 .search-content {
   width: 70%;
   margin: auto;
+}
+
+.search-card {
+  display: flex;
+  align-items: center;
 }
 
 

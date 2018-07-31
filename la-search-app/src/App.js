@@ -3,7 +3,7 @@ import logo from './assets/images/gw_logo_white.svg';
 import './App.scss';
 import SearchField from './js/SearchField';
 import ResultsTabs from './js/ResultsTabs';
-
+import SearchCard from './js/SearchCard';
 
 class App extends Component {
   render() {
@@ -18,6 +18,12 @@ class App extends Component {
           <div className="tabs-group">
             <ResultsTabs title="Most frequently asked questions"/>
             <ResultsTabs title="My questions"/>
+          </div>
+          <div className="search-card">
+            <SearchCard/>
+            <SearchCard/>
+            <SearchCard/>
+            <SearchCard/>
           </div>
         </div>
         
