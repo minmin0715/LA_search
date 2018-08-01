@@ -26,6 +26,8 @@ $blue: #007AAA;
   margin: auto;
 
   .tabs-group {
+    display: flex;
+    align-items: center;
     hr {
       margin-top: -23px;
       margin-left: -0px;
