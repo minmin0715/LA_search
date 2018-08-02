@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class SearchCard extends Component {
     render() {
-        var questions = [
+        var allQuestions = [
             {
                 name: "What are the <span class='keywords'>claim</span> processing <span class='keywords'>activities</span> by <span class='keywords'>week</span>?" ,
                 number: 89,
@@ -63,9 +63,13 @@ class SearchCard extends Component {
                 index: 12
             }
         ]
+        var lessQuestions = allQuestions.slice(0,4);
+        var moreQuestions = allQuestions.slice(4,allQuestions.length);
+        console.log('888', lessQuestions, moreQuestions);
+        
         return (
             <div className="search-card">
-                {questions.map((question) => 
+                {lessQuestions.map((question) => 
                     <div key={question.index} className="search-card-section">
                         <p className="card-content" dangerouslySetInnerHTML={{ __html: question.name}}></p>
                         <div className="times-number">{question.number}</div>
@@ -74,6 +78,6 @@ class SearchCard extends Component {
             </div>
         );
     }
-  }
+}
 
   export default SearchCard;

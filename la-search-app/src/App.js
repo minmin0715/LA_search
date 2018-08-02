@@ -41,8 +41,7 @@ class App extends Component {
                 showMoreFrequentlyQuestions={this.state.showMoreFrequentlyQuestions}
                 toggleMyQuestions={this.toggleMyQuestions}
                 showMoreMyQuestions={this.state.showMoreMyQuestions}/>
-         
-          <SearchCard/>
+              <SearchCard/>
         </div>
       </div>
     );
