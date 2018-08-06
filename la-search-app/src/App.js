@@ -3,7 +3,7 @@ import logo from './assets/images/gw_logo_white.svg';
 import './App.scss';
 import SearchField from './js/SearchField';
 import ResultsTabs from './js/ResultsTabs';
-import SearchCard from './js/SearchCard';
+
 
 class App extends Component {
 	render() {
@@ -14,9 +14,8 @@ class App extends Component {
 					<h1 className="App-title">Live Analytics Search</h1>
 				</header>
 				<div className="search-content">
-					<SearchField />
+					<SearchField/>
 					<ResultsTabs/>
-					<SearchCard/>
 				</div>
 			</div>
 		);

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SearchCard from './SearchCard';
 
 class ResultsTabs extends Component {
 	constructor(props) {
@@ -49,7 +50,11 @@ class ResultsTabs extends Component {
 					</div>
 				</div>
 				<hr/>
+				<SearchCard 
+					showMoreFrequentlyQuestions={this.state.showMoreFrequentlyQuestions}
+					showMoreMyQuestions={this.state.showMoreMyQuestions}/>
 			</div>
+			
 		);
 	}
 }
