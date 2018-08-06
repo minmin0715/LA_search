@@ -13,7 +13,7 @@
             cursor: pointer;
             
             .icon-arrow {
-                background-image: url('assets/images/card_toggle_arrow.svg');
+                
                 display: inline-block;
                 width: 70px;
                 height: 70px;
@@ -21,7 +21,14 @@
                 margin-right: 20px;
                 margin-left: -15px;
                 outline: none !important;
-                
+            }
+            .icon-arrow-down {
+                @extend .icon-arrow;
+                background-image: url('assets/images/card_toggle_arrow_down.svg');
+            }
+            .icon-arrow-up {
+                @extend .icon-arrow;
+                background-image: url('assets/images/card_toggle_arrow_up.svg');
             }
         }
     }
