@@ -65,7 +65,7 @@ class SearchCard extends Component {
         ]
         
         let lessQuestions = allQuestions.slice(0,4);
-        let moreQuestions = allQuestions.slice(4,allQuestions.length);
+        let moreQuestions = allQuestions;
         let showQuestions = this.props.showMoreFrequentlyQuestions? lessQuestions:moreQuestions;
        
         return showQuestions;

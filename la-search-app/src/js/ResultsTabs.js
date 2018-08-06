@@ -6,7 +6,8 @@ class ResultsTabs extends Component {
 		super(props);
 		this.state = {
 			showMoreFrequentlyQuestions: true,
-			showMoreMyQuestions: true
+			showMoreMyQuestions: true,
+			disabled: true
 		};
 		this.toggleFrequentlyQuestions = this.toggleFrequentlyQuestions.bind(this);
 		this.toggleMyQuestions = this.toggleMyQuestions.bind(this);
@@ -26,7 +27,7 @@ class ResultsTabs extends Component {
 		return (
 			<div className="tabs-group">
 				<div className="tabs-container">
-					<div className="tab-section" onClick={this.toggleFrequentlyQuestions}>
+					<div className="tab-section-active" onClick={this.toggleFrequentlyQuestions}>
 						<span className="text">Most frequently asked questions</span>
 						{
 							this.state.showMoreFrequentlyQuestions &&
@@ -37,7 +38,7 @@ class ResultsTabs extends Component {
 							<span className="icon-arrow-up"></span>
 						}
 					</div>
-					<div className="tab-section" onClick={this.toggleMyQuestions}>
+					<div className={this.state.disabled?"tab-section-disabled" : "tab-section-active"} onClick={this.toggleMyQuestions}>
 						<span className="text">My questions</span>
 						{
 						this.state.showMoreMyQuestions &&

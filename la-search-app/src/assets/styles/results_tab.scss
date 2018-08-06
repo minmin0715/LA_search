@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         
-        .tab-section {
+        .tab-section-active{
             font-size: 20px;
             font-family: Source Sans Pro Regular;
             color: #5D5D5D;
@@ -13,7 +13,6 @@
             cursor: pointer;
             
             .icon-arrow {
-                
                 display: inline-block;
                 width: 70px;
                 height: 70px;
@@ -31,7 +30,22 @@
                 background-image: url('assets/images/card_toggle_arrow_up.svg');
             }
         }
+
+        .tab-section-disabled {
+            @extend .tab-section-active;
+            color: #B4B4B4;
+            pointer-events: none;
+            .icon-arrow-down {
+                @extend .icon-arrow;
+                background-image: url('assets/images/card_toggle_arrow_down_disabled.svg');
+            }
+            .icon-arrow-up {
+                @extend .icon-arrow;
+                background-image: url('assets/images/card_toggle_arrow_up_disabled.svg');
+            }
+        }
     }
+    
     hr {
         margin-top: -23px;
         margin-left: -0px;
