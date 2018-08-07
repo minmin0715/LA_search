@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import logo from './assets/images/gw_logo_white.svg';
 import './App.scss';
 import SearchField from './js/SearchField';
-import ResultsTabs from './js/ResultsTabs';
 
 
 class App extends Component {
@@ -15,7 +14,6 @@ class App extends Component {
 				</header>
 				<div className="search-content">
 					<SearchField/>
-					<ResultsTabs/>
 				</div>
 			</div>
 		);
