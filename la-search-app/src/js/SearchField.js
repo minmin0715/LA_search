@@ -27,8 +27,7 @@ class SearchField extends Component {
 		let filteredQuestions = this.state.allQuestions
 		filteredQuestions = filteredQuestions.filter((question) => {
 			let questionName = question.name.toLowerCase();
-			console.log('77777777', questionName);
-			return questionName.indexOf(event.target.value.toLowerCase()) !== 1
+			return questionName.indexOf(event.target.value.toLowerCase()) !== -1
 		})
 
 		this.setState({
