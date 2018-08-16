@@ -5,7 +5,6 @@ $blue: #007AAA;
 
 .App-header {
   background-color: $blue;
-  height: 70px;
   padding: 15px;
   color: white;
   display: flex;
@@ -16,8 +15,8 @@ $blue: #007AAA;
     margin-right: 15px;
   }
   .App-title {
-    font-size: 15pt;
-    font-weight: normal;
+    font-size: 25px;
+    font-family: Source Sans Pro Regular;
   }
 }
 
