@@ -11,11 +11,12 @@ class SearchField extends Component {
 			showMoreFrequentlyQuestions: true,
 			showMoreMyQuestions: true,
 			allQuestions: allQuestions,
-			filteredQuestions: []
+			filteredQuestions: [],
+			moreQuestions: []
 		};
 		this.toggleFrequentlyQuestions = this.toggleFrequentlyQuestions.bind(this);
 		this.toggleMyQuestions = this.toggleMyQuestions.bind(this);
-		//this.getQuestions = this.getQuestions.bind(this);
+		this.updateState = this.updateState.bind(this);
 	}
 	componentWillMount() {
 		this.setState({
@@ -29,27 +30,37 @@ class SearchField extends Component {
 			let questionName = question.name.toLowerCase();
 			return questionName.indexOf(event.target.value.toLowerCase()) !== -1
 		})
-
+		this.updateState(filteredQuestions)
+		
+	}
+	updateState = (filteredQuestions) => {
 		this.setState({
-			filteredQuestions
+			filteredQuestions: filteredQuestions.length>4? filteredQuestions.splice(0,4):filteredQuestions,
+			moreQuestions: filteredQuestions.length>4? filteredQuestions:this.state.filteredQuestions,
+		}, () => {
+			console.log('all filtered questions')
 		})
 	}
-	// getQuestions() {
-    //     let allQuestions = this.state.items;
-        
-    //     let lessQuestions = allQuestions.slice(0,4);
-    //     let moreQuestions = allQuestions;
-    //     let showQuestions = this.props.showMoreFrequentlyQuestions? lessQuestions:moreQuestions;
-       
-		
-	// 	this.setState(prevState => ({
-	// 		items: !items
-	// 	}));
-    // }
+
 	toggleFrequentlyQuestions = () => {
-		this.setState(prevState => ({
-			showMoreFrequentlyQuestions: !prevState.showMoreFrequentlyQuestions
-		}));
+		this.setState({
+			showMoreFrequentlyQuestions: !this.state.showMoreFrequentlyQuestions
+		}, () => {
+			if(!this.state.showMoreFrequentlyQuestions) {
+				this.setState({
+					filteredQuestions: this.state.moreQuestions,
+					moreQuestions: this.state.filteredQuestions,	
+				}, () => {
+				})
+			}
+			else {
+				this.setState({
+					filteredQuestions: this.state.moreQuestions,
+					moreQuestions: this.state.filteredQuestions,	
+				}, () => {
+				})
+			}
+		})
 	}
 
 	toggleMyQuestions = () => {
@@ -57,7 +68,6 @@ class SearchField extends Component {
 			showMoreMyQuestions: !prevState.showMoreMyQuestions
 		}));
 	}
-	
     render() {
 		return (
 			<div className="search-wrapper">
